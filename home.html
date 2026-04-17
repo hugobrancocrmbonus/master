@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página inicial — Master</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ds/css/design-tokens.css" />
+    <link rel="stylesheet" href="ds/css/theme.css" />
+    <link rel="stylesheet" href="ds/css/core-components.css" />
+    <link rel="stylesheet" href="ds/css/components.css" />
+    <link rel="stylesheet" href="css/app-shell.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="app-sidebar" id="sidebar" aria-label="Navegação principal">
+        <div class="app-sidebar__inner">
+          <div class="app-sidebar__fixed">
+            <div class="app-sidebar__brand">
+              <img
+                class="app-sidebar__brand-mark"
+                src="https://www.figma.com/api/mcp/asset/a07431ca-c06f-4519-bfa8-40317cbe8154"
+                width="40"
+                height="40"
+                alt="CRMBonus"
+              />
+            </div>
+            <button
+              type="button"
+              class="app-sidebar__toggle app-sidebar__row"
+              id="sidebarToggle"
+              aria-expanded="false"
+              aria-controls="sidebar"
+              aria-label="Recolher ou expandir menu"
+            >
+              <span class="app-sidebar__icon-slot" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 6h16M4 12h16M4 18h16"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <span class="app-sidebar__label">Menu</span>
+            </button>
+            <a
+              class="app-sidebar__row app-sidebar__row--link is-active"
+              href="home.html"
+              aria-current="page"
+            >
+              <span class="app-sidebar__icon-slot" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 10.5L12 4l8 6.5V20a1 1 0 01-1 1h-5v-6H10v6H5a1 1 0 01-1-1v-9.5z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span class="app-sidebar__label">Página inicial</span>
+            </a>
+          </div>
+
+          <div class="app-sidebar__divider" aria-hidden="true"></div>
+
+          <nav class="app-sidebar__nav" aria-label="Secções">
+            <a class="app-sidebar__link" href="consultor-ia.html">
+              <span class="app-sidebar__icon-slot" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="9"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-dasharray="5 4"
+                  />
+                </svg>
+              </span>
+              <span class="app-sidebar__label">Consultor IA</span>
+            </a>
+            <a class="app-sidebar__link" href="dashboard.html">
+              <span class="app-sidebar__icon-slot" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 19h16M7 16V9m5 7V5m5 11v-4"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <span class="app-sidebar__label">Dashboard</span>
+            </a>
+            <a class="app-sidebar__link" href="#">
+              <span class="app-sidebar__icon-slot" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M7 4h10v16H7V4zm3 4h4m-4 4h4m-4 4h2"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <span class="app-sidebar__label">Relatórios</span>
+            </a>
+            <a class="app-sidebar__link" href="#">
+              <span class="app-sidebar__icon-slot" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12.83 2.18a2 2 0 00-2.83 0l-7.07 7.07A2 2 0 003 10.5V19a2 2 0 002 2h14a2 2 0 002-2v-8.5a2 2 0 00-.59-1.41l-7.08-7.09z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.5 9.5h.01v.01H8.5V9.5z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <span class="app-sidebar__label">Campanhas</span>
+            </a>
+            <a class="app-sidebar__link" href="#">
+              <span class="app-sidebar__icon-slot" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zm11 2v-2a4 4 0 00-3-3.87M17 11a4 4 0 10-8 0"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <span class="app-sidebar__label">Clientes</span>
+            </a>
+            <a class="app-sidebar__link" href="#">
+              <span class="app-sidebar__icon-slot" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path d="M14 2v6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path
+                    d="M12 11v6m0 0l-2.5-2.5M12 17l2.5-2.5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span class="app-sidebar__label">Central de exportações</span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+
+      <div class="app-main">
+        <header class="app-header" id="appHeader" data-state="default">
+          <div class="app-header__nav-left">
+            <div class="app-header__title-block" id="headerLeftDefault">
+              <h1 class="app-header__page-title">Página inicial</h1>
+            </div>
+            <nav
+              class="app-header__breadcrumb"
+              id="headerLeftApplied"
+              aria-label="Localização na aplicação"
+              hidden
+            >
+              <span class="app-header__crumb app-header__crumb--weak">Página inicial</span>
+              <span class="app-header__crumb-sep" aria-hidden="true">/</span>
+              <span class="app-header__crumb app-header__crumb--strong" aria-current="page">Consultor IA</span>
+            </nav>
+          </div>
+          <div class="app-header__actions">
+            <div class="app-header__brand-chip" id="headerBrandChip">
+              <button type="button" class="app-header__select-link js-open-brand-drawer" id="headerLinkSelectBrand">
+                Selecionar marca
+              </button>
+              <div class="app-header__brand-applied" id="headerBrandApplied" hidden>
+                <div class="app-header__brand-logo-wrap">
+                  <img class="app-header__brand-logo" id="headerBrandLogo" src="" alt="" />
+                </div>
+                <span class="app-header__brand-name" id="headerBrandName"></span>
+                <span class="app-header__brand-divider" aria-hidden="true"></span>
+                <button type="button" class="app-header__swap-brand js-open-brand-drawer" id="headerBtnSwapBrand">
+                  Trocar marca
+                </button>
+              </div>
+            </div>
+            <div class="app-header__icon-wrap">
+              <button type="button" class="app-header__icon-btn" aria-label="Notificações">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M12 22a2 2 0 002-2H10a2 2 0 002 2zm6-6V11a6 6 0 10-12 0v5L4 18h16l-2-2z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="app-header__badge" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="app-header__icon-wrap" id="headerIconMessages" hidden>
+              <button type="button" class="app-header__icon-btn" aria-label="Mensagens">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path
+                    d="M4 6h16v10H8l-4 3V6z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span class="app-header__badge" aria-hidden="true"></span>
+              </button>
+            </div>
+            <div class="app-header__user" role="button" tabindex="0" aria-label="Conta">
+              <img
+                class="app-header__avatar"
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'%3E%3Ccircle cx='36' cy='36' r='36' fill='%2358656f'/%3E%3Ccircle cx='36' cy='30' r='12' fill='%23eef0f2'/%3E%3Cpath d='M12 62c4-14 12-20 24-20s20 6 24 20' fill='%23eef0f2'/%3E%3C/svg%3E"
+                width="40"
+                height="40"
+                alt=""
+              />
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+          </div>
+        </header>
+
+        <main class="app-content">
+          <section class="home-welcome" aria-labelledby="welcome-title">
+            <h2 id="welcome-title" class="home-welcome__title">Boas-vindas ao Master!</h2>
+            <p class="home-welcome__text">
+              Por aqui, você pode transformar dados em decisões estratégicas e acompanhar os resultados de cada
+              cliente.
+            </p>
+          </section>
+
+          <section class="home-section home-section--brands" aria-labelledby="brands-title">
+            <div class="home-section__head home-section__head--brands">
+              <h3 id="brands-title" class="home-section__title home-section__title--brands">Marcas mais acessadas</h3>
+            </div>
+            <div class="home-carousel">
+              <div class="home-carousel__viewport">
+                <div class="home-carousel__track home-carousel__track--brands" id="brandCarousel">
+                  <article class="home-brand-card" data-brand="adidas">
+                    <div class="home-brand-card__row">
+                      <div class="home-brand-card__logo-wrap">
+                        <img
+                          class="home-brand-card__logo"
+                          src="https://www.figma.com/api/mcp/asset/fa823b1b-6570-4bad-acfc-bac4a991de4f"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="home-brand-card__graph">
+                        <img
+                          class="home-brand-card__spark-img"
+                          src="https://www.figma.com/api/mcp/asset/b0ebd428-7889-4028-8f46-04881f73ce13"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div class="home-brand-card__meta">
+                      <p class="home-brand-card__name">Adidas</p>
+                      <p class="home-brand-card__value">R$ 500.000</p>
+                    </div>
+                    <div class="home-brand-card__arrow">
+                      <button type="button" class="home-brand-card__icon-btn" aria-label="Abrir marca Adidas">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path
+                            d="M9 6l6 6-6 6"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </article>
+                  <article class="home-brand-card" data-brand="agua">
+                    <div class="home-brand-card__row">
+                      <div class="home-brand-card__logo-wrap home-brand-card__logo-wrap--light">
+                        <img
+                          class="home-brand-card__logo"
+                          src="https://www.figma.com/api/mcp/asset/88e8fc3f-b260-4647-9d9b-fbf27c4138cf"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="home-brand-card__graph">
+                        <img
+                          class="home-brand-card__spark-img"
+                          src="https://www.figma.com/api/mcp/asset/fa1bd6e1-be36-4fb8-80b7-e2deca34e988"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div class="home-brand-card__meta">
+                      <p class="home-brand-card__name">Agua de coco</p>
+                      <p class="home-brand-card__value">R$1.000</p>
+                    </div>
+                    <div class="home-brand-card__arrow">
+                      <button type="button" class="home-brand-card__icon-btn" aria-label="Abrir marca Agua de coco">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path
+                            d="M9 6l6 6-6 6"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </article>
+                  <article class="home-brand-card" data-brand="apple">
+                    <div class="home-brand-card__row">
+                      <div class="home-brand-card__logo-wrap">
+                        <img
+                          class="home-brand-card__logo"
+                          src="https://www.figma.com/api/mcp/asset/93e964f9-fd74-4312-b5d6-2070b29d5800"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="home-brand-card__graph">
+                        <img
+                          class="home-brand-card__spark-img"
+                          src="https://www.figma.com/api/mcp/asset/ea2dc983-d826-40dc-8bdb-1c1d33554620"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div class="home-brand-card__meta">
+                      <p class="home-brand-card__name">Apple</p>
+                      <p class="home-brand-card__value">R$ 3.000.000</p>
+                    </div>
+                    <div class="home-brand-card__arrow">
+                      <button type="button" class="home-brand-card__icon-btn" aria-label="Abrir marca Apple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path
+                            d="M9 6l6 6-6 6"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </article>
+                  <article class="home-brand-card" data-brand="bmw">
+                    <div class="home-brand-card__row">
+                      <div class="home-brand-card__logo-wrap home-brand-card__logo-wrap--white">
+                        <img
+                          class="home-brand-card__logo"
+                          src="https://www.figma.com/api/mcp/asset/6dac17b7-125f-4e7d-8792-601ddfd0339b"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="home-brand-card__graph">
+                        <img
+                          class="home-brand-card__spark-img home-brand-card__spark-img--flip"
+                          src="https://www.figma.com/api/mcp/asset/d5619f58-00da-46f1-8c84-6fc26cea45c2"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div class="home-brand-card__meta">
+                      <p class="home-brand-card__name">BMW</p>
+                      <p class="home-brand-card__value">R$ 2.200.000</p>
+                    </div>
+                    <div class="home-brand-card__arrow">
+                      <button type="button" class="home-brand-card__icon-btn" aria-label="Abrir marca BMW">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path
+                            d="M9 6l6 6-6 6"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </article>
+                  <article class="home-brand-card" data-brand="cocacola">
+                    <div class="home-brand-card__row">
+                      <div class="home-brand-card__logo-wrap home-brand-card__logo-wrap--white">
+                        <img
+                          class="home-brand-card__logo"
+                          src="https://www.figma.com/api/mcp/asset/5b44dc38-1759-4eb4-92a1-9379e6d8081d"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="home-brand-card__graph">
+                        <img
+                          class="home-brand-card__spark-img home-brand-card__spark-img--flip"
+                          src="https://www.figma.com/api/mcp/asset/d5619f58-00da-46f1-8c84-6fc26cea45c2"
+                          alt=""
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                    <div class="home-brand-card__meta">
+                      <p class="home-brand-card__name">Coca-cola</p>
+                      <p class="home-brand-card__value">R$ 800.000</p>
+                    </div>
+                    <div class="home-brand-card__arrow">
+                      <button type="button" class="home-brand-card__icon-btn" aria-label="Abrir marca Coca-cola">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path
+                            d="M9 6l6 6-6 6"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </article>
+                </div>
+                <div class="home-carousel__fade" aria-hidden="true"></div>
+                <button type="button" class="home-carousel__next" id="carouselNext" aria-label="Deslizar marcas">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path
+                      d="M9 6l6 6-6 6"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="home-section__foot home-section__foot--brands">
+              <a class="home-section__link home-section__link--footer" href="#">Conferir todas</a>
+            </div>
+          </section>
+
+          <section class="home-section" aria-labelledby="notif-title">
+            <div class="home-section__head">
+              <h3 id="notif-title" class="home-section__title">Notificações de mensagens</h3>
+            </div>
+            <div class="home-table-wrap">
+              <table class="home-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Notificação</th>
+                    <th scope="col">Data</th>
+                    <th scope="col"><span class="visually-hidden">Ação</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="home-table__brand">
+                        <span class="home-table__logo" style="background: #111">A</span>
+                        Adidas
+                      </div>
+                    </td>
+                    <td>Mensagem recebida</td>
+                    <td>18/08/2025</td>
+                    <td><a class="home-table__link" href="#">Acessar marca</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="home-table__brand">
+                        <span class="home-table__logo" style="background: #111">A</span>
+                        Adidas
+                      </div>
+                    </td>
+                    <td>Relatório enviado com sucesso!</td>
+                    <td>18/08/2025</td>
+                    <td><a class="home-table__link" href="#">Acessar marca</a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="home-table__brand">
+                        <span class="home-table__logo" style="background: #2e7d32">AC</span>
+                        Agua de coco
+                      </div>
+                    </td>
+                    <td>Visualização de módulo!</td>
+                    <td>18/08/2025</td>
+                    <td><a class="home-table__link" href="#">Acessar marca</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="home-section__foot">
+              <a class="home-section__link" href="#">Exibir mais</a>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="app-scrim" id="brandScrim" hidden></div>
+    <aside
+      class="app-brand-drawer"
+      id="brandDrawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="brandDrawerTitle"
+      aria-hidden="true"
+    >
+      <div class="app-brand-drawer__header">
+        <h2 class="app-brand-drawer__title" id="brandDrawerTitle">Selecionar marca</h2>
+        <button type="button" class="app-brand-drawer__close" id="closeBrandDrawer" aria-label="Fechar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M18 6L6 18M6 6l12 12"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="app-brand-drawer__controls">
+        <div class="app-brand-drawer__search">
+          <input
+            type="search"
+            class="app-brand-drawer__search-input"
+            id="brandSearchInput"
+            placeholder="Busque por marca"
+            autocomplete="off"
+            aria-label="Busque por marca"
+          />
+          <button type="button" class="app-brand-drawer__search-btn" aria-label="Buscar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+              <path d="M16 16l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="app-brand-drawer__tabs" role="tablist" aria-label="Filtrar marcas">
+          <button
+            type="button"
+            class="app-brand-drawer__tab is-active"
+            id="tabMine"
+            role="tab"
+            aria-selected="true"
+            aria-controls="brandDrawerPanel"
+          >
+            Minhas marcas
+          </button>
+          <button
+            type="button"
+            class="app-brand-drawer__tab"
+            id="tabAll"
+            role="tab"
+            aria-selected="false"
+            aria-controls="brandDrawerPanel"
+          >
+            Todas as marcas
+          </button>
+        </div>
+      </div>
+
+      <div class="app-brand-drawer__content" id="brandDrawerPanel" role="tabpanel">
+        <ul class="app-brand-drawer__list" id="brandDrawerList">
+          <li>
+            <button type="button" class="app-brand-drawer__card" data-brand="adidas">
+              <span class="app-brand-drawer__card-media">
+                <img
+                  src="https://www.figma.com/api/mcp/asset/65917568-384b-4b71-ba05-6849e1c9b460"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </span>
+              <span class="app-brand-drawer__card-text">
+                <span class="app-brand-drawer__card-name">Adidas</span>
+                <span class="app-brand-drawer__card-meta">Jane Doa</span>
+              </span>
+              <span class="app-brand-drawer__card-chevron" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="app-brand-drawer__card" data-brand="agua">
+              <span class="app-brand-drawer__card-media">
+                <img
+                  src="https://www.figma.com/api/mcp/asset/1b7a0ec3-f7dc-42cf-9728-0d8faed363bb"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </span>
+              <span class="app-brand-drawer__card-text">
+                <span class="app-brand-drawer__card-name">Água de coco</span>
+                <span class="app-brand-drawer__card-meta">Jane Doa</span>
+              </span>
+              <span class="app-brand-drawer__card-chevron" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="app-brand-drawer__card" data-brand="cocacola">
+              <span class="app-brand-drawer__card-media">
+                <img
+                  src="https://www.figma.com/api/mcp/asset/4ebb1199-bca0-48e5-bf44-bf05ae6b25a9"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </span>
+              <span class="app-brand-drawer__card-text">
+                <span class="app-brand-drawer__card-name">Coca-Cola</span>
+                <span class="app-brand-drawer__card-meta">Jane Doa</span>
+              </span>
+              <span class="app-brand-drawer__card-chevron" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="app-brand-drawer__card" data-brand="lego">
+              <span class="app-brand-drawer__card-media">
+                <img
+                  src="https://www.figma.com/api/mcp/asset/d0b5c411-e17b-4612-a4f4-72afbdee64d3"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </span>
+              <span class="app-brand-drawer__card-text">
+                <span class="app-brand-drawer__card-name">Lego</span>
+                <span class="app-brand-drawer__card-meta">Jane Doa</span>
+              </span>
+              <span class="app-brand-drawer__card-chevron" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="app-brand-drawer__card" data-brand="nike">
+              <span class="app-brand-drawer__card-media">
+                <img
+                  src="https://www.figma.com/api/mcp/asset/bc4c6107-9033-4e50-b35a-2721932e3da3"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </span>
+              <span class="app-brand-drawer__card-text">
+                <span class="app-brand-drawer__card-name">Nike</span>
+                <span class="app-brand-drawer__card-meta">Jane Doa</span>
+              </span>
+              <span class="app-brand-drawer__card-chevron" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="app-brand-drawer__card" data-brand="samsung">
+              <span class="app-brand-drawer__card-media">
+                <img
+                  src="https://www.figma.com/api/mcp/asset/a39bda70-130f-4fc6-a05d-f8ba5f4427e8"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+              </span>
+              <span class="app-brand-drawer__card-text">
+                <span class="app-brand-drawer__card-name">Samsung</span>
+                <span class="app-brand-drawer__card-meta">Jane Doa</span>
+              </span>
+              <span class="app-brand-drawer__card-chevron" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M9 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <footer class="app-brand-drawer__footer">
+        <div class="app-brand-drawer__footer-actions">
+          <button type="button" class="btn btn--neutral btn--outline btn--md" id="cancelBrandDrawer">
+            Cancelar
+          </button>
+          <button
+            type="button"
+            class="btn btn--primary btn--solid btn--md"
+            id="confirmBrandDrawer"
+            disabled
+            aria-disabled="true"
+          >
+            Selecionar marca
+          </button>
+        </div>
+      </footer>
+    </aside>
+
+    <script src="js/home.js"></script>
+  </body>
+</html>
