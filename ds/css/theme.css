@@ -1,0 +1,53 @@
+/**
+ * Tema claro — sobrescreve tokens semânticos (design-tokens.css).
+ * Ativar com <html data-theme="light">.
+ */
+
+[data-theme="light"] {
+  --crm-bg-regular-surface-base-enabled: #eceff1;
+  --crm-bg-regular-surface-lower-enabled: #ffffff;
+  --crm-fg-on-surface-neutral-moderate: #5c656d;
+  --crm-fg-on-surface-neutral-inverse: #ffffff;
+  --crm-fg-on-surface-neutral-strong: #1c2127;
+  --crm-border-color-default: #c5ccd3;
+
+  --crm-bg-regular-primary-enabled: #e69400;
+  --crm-bg-regular-primary-hovered: #d88700;
+  --crm-bg-regular-primary-pressed: #c77a00;
+  --crm-fg-on-surface-primary-default: #8a5000;
+  --crm-bg-transparent-primary-hovered: #e6940026;
+  --crm-bg-transparent-primary-pressed: #e6940033;
+
+  --crm-bg-regular-surface-inverse-enabled: #2d3339;
+  --crm-bg-regular-surface-inverse-hovered: #3d444c;
+  --crm-bg-regular-surface-inverse-pressed: #4a525c;
+  --crm-bg-transparent-surface-inverse-hovered: #2d333926;
+  --crm-bg-transparent-surface-inverse-pressed: #2d333933;
+
+  --crm-bg-regular-critical-enabled: #c62828;
+  --crm-bg-regular-critical-hovered: #b71c1c;
+  --crm-bg-regular-critical-pressed: #a31515;
+  --crm-fg-on-surface-critical-default: #c62828;
+  --crm-fg-on-surface-critical-inverse: #ffffff;
+  --crm-bg-transparent-critical-hovered: #c6282826;
+  --crm-bg-transparent-critical-pressed: #c6282833;
+  --crm-bg-transparent-critical-enabled: #c628281a;
+
+  --crm-fg-on-surface-informative-default: #0277bd;
+  --crm-bg-transparent-informative-enabled: #0277bd1a;
+  --crm-fg-on-surface-success-default: #2e7d32;
+  --crm-bg-transparent-success-enabled: #2e7d321a;
+
+  --color-canvas: var(--crm-bg-regular-surface-base-enabled);
+}
+
+/* Shell MD: elevação mais suave em superfícies claras */
+[data-theme="light"] {
+  --md-elevation-1: 0 1px 2px rgba(60, 64, 67, 0.12), 0 1px 3px 1px rgba(60, 64, 67, 0.08);
+  --md-elevation-2: 0 1px 3px rgba(60, 64, 67, 0.14), 0 4px 8px 3px rgba(60, 64, 67, 0.08);
+  --md-elevation-3: 0 4px 8px 3px rgba(60, 64, 67, 0.12), 0 1px 3px rgba(60, 64, 67, 0.1);
+}
+
+[data-theme="light"] .md-scrim {
+  background: rgba(0, 0, 0, 0.32);
+}

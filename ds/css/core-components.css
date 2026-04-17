@@ -1,0 +1,276 @@
+/**
+ * Core Components — botão texto (Fill / Outline / Ghost × Brand / Neutral / Danger)
+ * Ficheiro: Core-Components (uNFZLPczZwz7co8eiuxScK), component set "Button" (28:57508)
+ * Tamanhos alinhados ao Figma: Extra Small = 32px, Small = 40px, Medium = 48px altura.
+ * Importar depois de design-tokens.css
+ */
+
+/* -------------------------------------------------------------------------- */
+/* Base                                                                      */
+/* -------------------------------------------------------------------------- */
+
+.btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--crm-spacing-xs);
+  margin: 0;
+  font-family: var(--crm-font-family-brand);
+  font-weight: var(--crm-font-weight-medium);
+  font-size: var(--crm-font-size-sm);
+  line-height: var(--crm-line-height-sm);
+  letter-spacing: var(--crm-letter-spacing-default);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  border-style: solid;
+  border-width: var(--crm-border-width-hairline);
+  border-radius: var(--crm-radii-sm);
+  transition: var(--transition-interaction);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: calc(var(--crm-state-disabled) / 100);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Tamanhos (Medium / Small / Extra Small)                                     */
+/* -------------------------------------------------------------------------- */
+
+.btn--md {
+  min-height: var(--crm-size-xl2);
+  padding: calc((var(--crm-size-xl2) - var(--crm-line-height-sm)) / 2) var(--crm-spacing-md);
+}
+
+.btn--sm {
+  min-height: var(--crm-size-xl);
+  padding: calc((var(--crm-size-xl) - var(--crm-line-height-sm)) / 2) var(--crm-spacing-md);
+}
+
+.btn--xs {
+  min-height: var(--crm-size-lg);
+  padding: calc((var(--crm-size-lg) - var(--crm-line-height-sm)) / 2) var(--crm-spacing-md);
+}
+
+.btn--icon.btn--md {
+  width: var(--crm-size-xl2);
+  min-width: var(--crm-size-xl2);
+  padding: 0;
+}
+
+.btn--icon.btn--sm {
+  width: var(--crm-size-xl);
+  min-width: var(--crm-size-xl);
+  padding: 0;
+}
+
+.btn--icon.btn--xs {
+  width: var(--crm-size-lg);
+  min-width: var(--crm-size-lg);
+  padding: 0;
+}
+
+.btn__icon {
+  flex-shrink: 0;
+  width: var(--crm-size-icon-sm);
+  height: var(--crm-size-icon-sm);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Brand — Fill (solid)                                                       */
+/* -------------------------------------------------------------------------- */
+
+.btn--primary.btn--solid {
+  background-color: var(--crm-bg-regular-primary-enabled);
+  color: var(--crm-fg-on-surface-neutral-inverse);
+  border-color: transparent;
+}
+
+.btn--primary.btn--solid:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-primary-hovered);
+}
+
+.btn--primary.btn--solid:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-primary-pressed);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Brand — Outline                                                           */
+/* -------------------------------------------------------------------------- */
+
+.btn--primary.btn--outline {
+  background-color: transparent;
+  color: var(--crm-fg-on-surface-primary-default);
+  border-color: var(--crm-fg-on-surface-primary-default);
+}
+
+.btn--primary.btn--outline:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-primary-hovered);
+  color: var(--crm-fg-on-surface-neutral-inverse);
+  border-color: var(--crm-fg-on-surface-primary-default);
+}
+
+.btn--primary.btn--outline:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-primary-pressed);
+  color: var(--crm-fg-on-surface-neutral-inverse);
+  border-color: var(--crm-fg-on-surface-primary-default);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Brand — Ghost                                                              */
+/* -------------------------------------------------------------------------- */
+
+.btn--primary.btn--ghost {
+  background-color: transparent;
+  color: var(--crm-fg-on-surface-primary-default);
+  border-color: transparent;
+}
+
+.btn--primary.btn--ghost:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-transparent-primary-hovered);
+}
+
+.btn--primary.btn--ghost:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-transparent-primary-pressed);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Neutral — Fill                                                            */
+/* -------------------------------------------------------------------------- */
+
+.btn--neutral.btn--solid {
+  background-color: var(--crm-bg-regular-surface-inverse-enabled);
+  color: var(--crm-fg-on-surface-neutral-inverse);
+  border-color: transparent;
+}
+
+.btn--neutral.btn--solid:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-surface-inverse-hovered);
+}
+
+.btn--neutral.btn--solid:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-surface-inverse-pressed);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Neutral — Outline                                                         */
+/* -------------------------------------------------------------------------- */
+
+.btn--neutral.btn--outline {
+  background-color: transparent;
+  color: var(--crm-fg-on-surface-neutral-strong);
+  border-color: var(--crm-fg-on-surface-neutral-strong);
+}
+
+.btn--neutral.btn--outline:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-surface-inverse-hovered);
+  color: var(--crm-fg-on-surface-neutral-inverse);
+  border-color: var(--crm-fg-on-surface-neutral-strong);
+}
+
+.btn--neutral.btn--outline:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-surface-inverse-pressed);
+  color: var(--crm-fg-on-surface-neutral-inverse);
+  border-color: var(--crm-fg-on-surface-neutral-strong);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Neutral — Ghost                                                            */
+/* -------------------------------------------------------------------------- */
+
+.btn--neutral.btn--ghost {
+  background-color: transparent;
+  color: var(--crm-fg-on-surface-neutral-strong);
+  border-color: transparent;
+}
+
+.btn--neutral.btn--ghost:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-transparent-surface-inverse-hovered);
+}
+
+.btn--neutral.btn--ghost:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-transparent-surface-inverse-pressed);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Danger — Fill                                                              */
+/* -------------------------------------------------------------------------- */
+
+.btn--danger.btn--solid {
+  background-color: var(--crm-bg-regular-critical-enabled);
+  color: var(--crm-fg-on-surface-neutral-strong);
+  border-color: transparent;
+}
+
+.btn--danger.btn--solid:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-critical-hovered);
+}
+
+.btn--danger.btn--solid:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-critical-pressed);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Danger — Outline                                                           */
+/* -------------------------------------------------------------------------- */
+
+.btn--danger.btn--outline {
+  background-color: transparent;
+  color: var(--crm-fg-on-surface-critical-default);
+  border-color: var(--crm-fg-on-surface-critical-default);
+}
+
+.btn--danger.btn--outline:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-critical-hovered);
+  color: var(--crm-fg-on-surface-neutral-strong);
+  border-color: var(--crm-bg-regular-critical-enabled);
+}
+
+.btn--danger.btn--outline:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-regular-critical-pressed);
+  color: var(--crm-fg-on-surface-neutral-strong);
+  border-color: var(--crm-bg-regular-critical-enabled);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Danger — Ghost                                                             */
+/* -------------------------------------------------------------------------- */
+
+.btn--danger.btn--ghost {
+  background-color: transparent;
+  color: var(--crm-fg-on-surface-critical-default);
+  border-color: transparent;
+}
+
+.btn--danger.btn--ghost:hover:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-transparent-critical-hovered);
+}
+
+.btn--danger.btn--ghost:active:not(:disabled):not([aria-disabled="true"]) {
+  background-color: var(--crm-bg-transparent-critical-pressed);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Preview                                                                   */
+/* -------------------------------------------------------------------------- */
+
+.ds-preview {
+  background-color: var(--crm-bg-regular-surface-base-enabled);
+  color: var(--crm-fg-on-surface-neutral-moderate);
+  min-height: 100vh;
+  padding: var(--crm-spacing-md);
+  font-family: var(--crm-font-family-brand);
+}
