@@ -5,6 +5,7 @@
 
 .app {
   display: flex;
+  min-height: 100%;
   background: var(--crm-bg-regular-surface-base-enabled);
   color: var(--crm-fg-on-surface-neutral-strong);
 }
