@@ -5,7 +5,6 @@
 
 .app {
   display: flex;
-  min-height: 100vh;
   background: var(--crm-bg-regular-surface-base-enabled);
   color: var(--crm-fg-on-surface-neutral-strong);
 }
